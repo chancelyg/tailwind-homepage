@@ -2,6 +2,8 @@
 
 一个基于HTML、TailwindCSS和YAML配置构建的简洁优雅个人导航页面。
 
+![example](example.png)
+
 ## 项目结构
 
 项目仅有 2 个文件，如下：

@@ -2,6 +2,8 @@
 
 A clean and elegant personal navigation page built with HTML, TailwindCSS, and YAML configuration.  
 
+![example](example.png)
+
 ## Project Structure  
 
 The project contains only 2 files:  
