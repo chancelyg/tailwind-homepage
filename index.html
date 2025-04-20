@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的导航页</title>
+    <title>Loading...</title>
+    <link rel="icon" type="image/x-icon" id="favicon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <style>
@@ -19,8 +20,8 @@
     <div class="container mx-auto px-4 py-8">
         <!-- 顶部标题和搜索框 -->
         <header class="mb-8 text-center">
-            <h1 class="text-4xl font-bold text-indigo-700 mb-2">我的导航</h1>
-            <p class="text-gray-600 mb-6">快速访问常用网站</p>
+            <h1 class="text-4xl font-bold text-indigo-700 mb-2" id="pageTitle">Loading...</h1>
+            <p class="text-gray-600 mb-6" id="pageDescription">Loading...</p>
 
             <div class="max-w-md mx-auto">
                 <div class="relative">
@@ -45,7 +46,7 @@
 
         <!-- 页脚 -->
         <footer class="mt-12 text-center text-gray-500 text-sm">
-            <p>© 2023 我的导航页. 使用Tailwind CSS构建</p>
+            <p id="pageFooter">Loading...</p>
         </footer>
     </div>
 
@@ -103,6 +104,15 @@
         async function initialize() {
             const config = await loadConfig();
             if (!config) return;
+
+            // 应用页面信息
+            if (config.pageInfo) {
+                document.title = config.pageInfo.title;
+                document.getElementById('favicon').href = config.pageInfo.logo;
+                document.getElementById('pageTitle').textContent = config.pageInfo.title;
+                document.getElementById('pageDescription').textContent = config.pageInfo.description;
+                document.getElementById('pageFooter').textContent = config.pageInfo.footer;
+            }
 
             const container = document.getElementById('categoriesContainer');
             config.categories.forEach(category => {

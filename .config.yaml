@@ -1,4 +1,10 @@
-categories:
+pageInfo:
+  title: Chancel's Homepage
+  description: 我的主页
+  logo: https://example.com/static/img/favicon.ico
+  footer: 2025 © Chancel
+
+categories::
   - name: Dev Tools
     color: indigo-600
     sites:
@@ -40,3 +46,4 @@ categories:
         icon: U
         iconBg: bg-purple-700
         iconColor: text-white
+
