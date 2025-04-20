@@ -1,0 +1,42 @@
+categories:
+  - name: Dev Tools
+    color: indigo-600
+    sites:
+      - name: GitHub
+        url: https://github.com
+        icon: GH
+        iconBg: bg-gray-200
+        iconColor: text-black
+      - name: DEV Community
+        url: https://dev.to
+        icon: DEV
+        iconBg: bg-gray-800
+        iconColor: text-white
+
+  - name: Desgin Resources
+    color: green-600
+    sites:
+      - name: Figma
+        url: https://figma.com
+        icon: F
+        iconBg: bg-purple-500
+        iconColor: text-white
+      - name: Unsplash
+        url: https://unsplash.com
+        icon: U
+        iconBg: bg-gray-800
+        iconColor: text-white
+
+  - name: Study Platforms
+    color: blue-600
+    sites:
+      - name: LeetCode
+        url: https://leetcode.com
+        icon: LC
+        iconBg: bg-yellow-500
+        iconColor: text-white
+      - name: Udemy
+        url: https://udemy.com
+        icon: U
+        iconBg: bg-purple-700
+        iconColor: text-white
